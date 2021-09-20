@@ -17,8 +17,22 @@
   },
   "homepage": "https://github.com/shaikhjavedofficial/new_class_app#readme",
   "dependencies": {
+    "@types/react": "^17.0.21",
+    "bootstrap": "^5.1.1",
+    "browserify": "^17.0.0",
+    "flux": "^4.0.1",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
-    "gulp-open": "^3.0.1"
+    "gulp-eslint": "^6.0.0",
+    "gulp-open": "^3.0.1",
+    "jquery": "^3.6.0",
+    "loadash": "^1.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.1",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watch": "^1.0.2"
   }
 }
