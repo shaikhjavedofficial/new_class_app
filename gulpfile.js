@@ -17,10 +17,13 @@ var config = {
     baseUrl: 'http://localhost',
     paths: {
         html: './src/*.html',
+        js: './src/**/*.js*',
+        images: './src/images/*.png',
+        indexJs: './src/index.js',
+        css: ['./node_modules/bootstrap/dist/css/bootstrap.min.css',
+            './src/css/*.css'
+        ],
         dist: './dist',
-        js: './src/**/*.js',
-        indexJS: './src/index.js',
-        css: './node_modules/bootstrap/dist/css/bootstrap.min.css'
     }
 };
 
@@ -45,6 +48,15 @@ gulp.task('html', function () {
         .pipe(gulp.dest(config.paths.dist))
         .pipe(conn.reload());
 });
+
+gulp.task('images', function () {
+    gulp.src(config.paths.images)
+        .pipe(gulp.dest(config.paths.dist + '/images'))
+        .pipe(conn.reload());
+
+    gulp.src('./src/favicon.ico')
+        .pipe(gulp.dest(config.paths.dist));
+})
 
 gulp.task('js', function () {
     browserify(config.paths.indexJs)

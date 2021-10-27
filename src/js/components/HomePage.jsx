@@ -1,13 +1,13 @@
 "use strict";
 var React = require("react");
 var ReactDOM = require("react-dom");
+var createReactClass = require("create-react-class");
 
-var Home = React.createClass({
+var Home = createReactClass({
   render: function () {
     return (
-      <div>
+      <div className="hm">
         <h1>My Home Comp</h1>
-        {console.log("haha")}
       </div>
     );
   },
